@@ -1,0 +1,55 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
+    "jsdom": "^16.5.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "test-mocha": "mocha ./test/mocha --require esm --require @babel/register --require ./test/dom.js --require ignore-styles --require ./test/helpers.js --recursive",
+    "test-jest": "jest -- test/unit/jest/app.test.js test/unit/jest/greeting.test.js",
+    "test-jest-all": "jest -- test/jest --recursive",
+    "test-cypress": "cypress run",
+    "test-testcafe": "testcafe chrome test/e2e/testcafe/*.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:8090",
+  "devDependencies": {
+    "@babel/register": "^7.13.8",
+    "chai": "^4.3.4",
+    "cypress": "^6.5.0",
+    "esm": "^3.2.25",
+    "gulp-mocha": "^8.0.0",
+    "ignore-styles": "^5.0.1",
+    "mocha": "^8.3.2"
+  }
+}

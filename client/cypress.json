@@ -1,0 +1,6 @@
+{
+  "integrationFolder": "test/cypress",
+  "fixturesFolder": false,
+  "supportFile": false,
+  "pluginsFile": false
+}
