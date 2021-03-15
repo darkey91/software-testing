@@ -1,4 +1,5 @@
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import HomePage from "./components/HomePage";
 import LoginPage from "./components/LoginPage";
@@ -8,7 +9,7 @@ import AddTaskPage from "./components/AddTaskPage";
 
 function App() {
     return (
-        <BrowserRouter>
+        <Router>
             <div>
                 <Switch>
                     <Route exact path='/' component={() => <HomePage/>}/>
@@ -18,7 +19,7 @@ function App() {
                     <Route exact path='/add-task' component={() => <AddTaskPage />}/>
                 </Switch>
             </div>
-        </BrowserRouter>
+        </Router>
     );
 }
 

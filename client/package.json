@@ -19,8 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test-mocha": "mocha ./test/mocha --require esm --require @babel/register --require ./test/dom.js --require ignore-styles --require ./test/helpers.js --recursive",
-    "test-jest": "jest -- test/unit/jest/app.test.js test/unit/jest/greeting.test.js",
-    "test-jest-all": "jest -- test/jest --recursive",
+    "test-jest": "jest -- test/jest --recursive",
     "test-cypress": "cypress run",
     "test-testcafe": "testcafe chrome test/e2e/testcafe/*.js"
   },
@@ -50,6 +49,7 @@
     "esm": "^3.2.25",
     "gulp-mocha": "^8.0.0",
     "ignore-styles": "^5.0.1",
-    "mocha": "^8.3.2"
+    "mocha": "^8.3.2",
+    "react-test-renderer": "^17.0.1"
   }
 }

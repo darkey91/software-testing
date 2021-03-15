@@ -11,7 +11,7 @@ export const Home = () => {
     const userLogin = sessionStorage.getItem("userLogin");
 
     return (
-        <div id="main_phrase">{hello(userLogin)}</div>
+        <div id="main-phrase">{hello(userLogin)}</div>
     );
 };
 
