@@ -28,14 +28,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Run express server
-        working-directory: server
-        run: |
-          npm install
-          npm start &
-        env:
-          PORT: 8090
-
       - name: Run and test
         working-directory: client
         run: |
