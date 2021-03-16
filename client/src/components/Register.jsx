@@ -45,7 +45,7 @@ class Register extends React.Component {
                     <input name="userLogin" type="text" className="form-control" id="login"
                            onChange={this.handleInputChange}
                     />
-                    <button type="submit">Submit</button>
+                    <button id="register-submit" type="submit">Submit</button>
                 </form>
             </div>
         );

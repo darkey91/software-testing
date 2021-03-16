@@ -14,7 +14,7 @@ const Header = () => {
     return (
         <div className='link-container'>
             <NavLink className='link' to="/">Home</NavLink>
-            {isLogin ? (<NavLink id="logout-link" className='link' to="/" onClick={onLogout}>Logout</NavLink>) : (<NavLink id="login-link" className='link' to='/login'>Login</NavLink>)}
+            {isLogin ? (<NavLink id="logout-link" className='link' to="/logout" onClick={onLogout}>Logout</NavLink>) : (<NavLink id="login-link" className='link' to='/login'>Login</NavLink>)}
             {!isLogin && <NavLink id="register-link" className='link' to="/register">Register</NavLink>}
             {isLogin && <NavLink id="tasks-link" className='link' to="/tasks">Tasks</NavLink>}
             {isLogin && <NavLink id="add-task-link" className='link' to="/add-task">Add task</NavLink>}

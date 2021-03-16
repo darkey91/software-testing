@@ -21,7 +21,7 @@
     "test-mocha": "mocha ./test/mocha --require esm --require @babel/register --require ./test/dom.js --require ignore-styles --require ./test/helpers.js --recursive",
     "test-jest": "jest -- test/jest --recursive",
     "test-cypress": "cypress run",
-    "test-testcafe": "testcafe chrome test/e2e/testcafe/*.js"
+    "test-play": "jest -- test/playwrigth --recursive"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +50,8 @@
     "gulp-mocha": "^8.0.0",
     "ignore-styles": "^5.0.1",
     "mocha": "^8.3.2",
-    "react-test-renderer": "^17.0.1"
+    "playwright": "^1.9.2",
+    "react-test-renderer": "^17.0.1",
+    "resemblejs": "^3.2.5"
   }
 }

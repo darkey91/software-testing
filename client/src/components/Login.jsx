@@ -49,7 +49,7 @@ class Login extends React.Component {
                            aria-describedby="loginHelp"
                            onChange={this.handleInputChange}
                     />
-                    <button type="submit">Submit</button>
+                    <button id="login-submit" type="submit">Submit</button>
                 </form>
             </div>
         );
