@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component
 import ru.itmo.dkudaiberdieva.sd.mvc.model.Task
 import ru.itmo.dkudaiberdieva.sd.mvc.model.User
 import ru.itmo.dkudaiberdieva.sd.mvc.repository.UserRepository
+import java.sql.Statement
 
 @Component("userRepository")
 class UserRepositoryImpl(private val jdbcTemplate: JdbcTemplate): UserRepository {
@@ -21,7 +22,7 @@ class UserRepositoryImpl(private val jdbcTemplate: JdbcTemplate): UserRepository
         val keyHolder: KeyHolder = GeneratedKeyHolder()
         jdbcTemplate.update(
             { connection ->
-                connection.prepareStatement(sql).apply {
+                connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS).apply {
                     setString(1, user.login)
                 }
             },

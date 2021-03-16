@@ -7,6 +7,7 @@ import org.springframework.jdbc.support.KeyHolder
 import org.springframework.stereotype.Component
 import ru.itmo.dkudaiberdieva.sd.mvc.model.Task
 import ru.itmo.dkudaiberdieva.sd.mvc.repository.TaskRepository
+import java.sql.Statement
 
 @Component("taskRepository")
 open class TaskRepositoryImpl(private val jdbcTemplate: JdbcTemplate) : TaskRepository {
@@ -41,7 +42,7 @@ open class TaskRepositoryImpl(private val jdbcTemplate: JdbcTemplate) : TaskRepo
         val keyHolder: KeyHolder = GeneratedKeyHolder()
         jdbcTemplate.update(
             { connection ->
-                connection.prepareStatement(sql).apply {
+                connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS).apply {
                     setString(1, task.name)
                     setString(2, task.login)
                 }

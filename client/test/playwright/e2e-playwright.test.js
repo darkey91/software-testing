@@ -26,8 +26,8 @@ describe(`Playwright tests`, () => {
         await page.goto(url + '/login');
         await page.fill('#login', login);
         const screen = await page.screenshot();
-        await page.screenshot({path: 'test/playwrigth/screenshots/actual-login-with-input.png', fullPage: true});
-        let data = await compareImages(screen, 'test/playwrigth/screenshots/login-with-input.png');
+        await page.screenshot({path: 'test/playwright/screenshots/actual-login-with-input.png', fullPage: true});
+        let data = await compareImages(screen, 'test/playwright/screenshots/login-with-input.png');
         fs.writeFile("./comparing.png", data.getBuffer(),() => {});
         // expect(data.misMatchPercentage).toEqual(0);
     })

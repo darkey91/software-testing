@@ -8,6 +8,8 @@ class Task(
     @JsonProperty("userLogin") var login: String? = null,
     var completed: Boolean = false,
 ) {
+    constructor(name: String, user: User): this(name = name, login = user.login)
+
     companion object {
         const val TABLE_NAME = "task"
     }

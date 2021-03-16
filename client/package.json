@@ -21,7 +21,7 @@
     "test-mocha": "mocha ./test/mocha --require esm --require @babel/register --require ./test/dom.js --require ignore-styles --require ./test/helpers.js --recursive",
     "test-jest": "jest -- test/jest --recursive",
     "test-cypress": "cypress run",
-    "test-play": "jest -- test/playwrigth --recursive"
+    "test-play": "jest -- test/playwright --recursive"
   },
   "eslintConfig": {
     "extends": [
