@@ -46,7 +46,7 @@ public class TaskControllerTest {
         mockMvc.perform(get(url))
                 .andExpect(status().isOk())
                 .andExpect(content().string(expected))
-                .andDo(document("login"));
+                .andDo(document("taskController"));
     }
 
 

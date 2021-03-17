@@ -23,7 +23,7 @@ class UserController(
         try {
             savedUser = userRepo.save(user)
         } catch (e: IllegalStateException) {
-            return mapper.writeValueAsString(mapOf("errors" to listOf(e.cause)))
+            return mapper.writeValueAsString(mapOf("errors" to listOf(e.message.toString())))
         }
 
         return mapper.writeValueAsString(savedUser)

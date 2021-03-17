@@ -29,7 +29,7 @@ describe(`Playwright tests`, () => {
         await page.screenshot({path: 'test/playwright/screenshots/actual-login-with-input.png', fullPage: true});
         let data = await compareImages(screen, 'test/playwright/screenshots/login-with-input.png');
         fs.writeFile("./comparing.png", data.getBuffer(),() => {});
-        // expect(data.misMatchPercentage).toEqual(0);
+        expect(data.misMatchPercentage).toEqual("0.00");
     })
 
     test('Home page without user', async () => {

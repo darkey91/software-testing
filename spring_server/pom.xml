@@ -19,23 +19,37 @@
         <maven.compiler.target>11</maven.compiler.target>
         <kotlin.version>1.4.20</kotlin.version>
         <aspectj.version>1.8.10</aspectj.version>
+        <javax.activation.version>1.2.0</javax.activation.version>
+        <jaxb.api.version>2.3.0</jaxb.api.version>
+        <lombok.version>1.18.6</lombok.version>
     </properties>
 
     <dependencies>
         <dependency>
+            <groupId>com.sun.activation</groupId>
+            <artifactId>javax.activation</artifactId>
+            <version>${javax.activation.version}</version>
+        </dependency>
+        <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
+            <version>${jaxb.api.version}</version>
         </dependency>
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-core</artifactId>
-            <version>2.3.0</version>
+            <version>${jaxb.api.version}</version>
         </dependency>
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
-            <version>2.3.0</version>
+            <version>${jaxb.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
